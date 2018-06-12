@@ -39,18 +39,7 @@ MongoCilent.connect(url, (err, client) => {
   //     }
   //   );
 
-  db
-    .collection('Users')
-    .find({ name: 'Jeff' })
-    .toArray()
-    .then(
-      docs => {
-        console.log(JSON.stringify(docs, null, 2));
-      },
-      err => {
-        console.log('Unable to fetch users', err);
-      }
-    );
+
 
   client.close();
 });
